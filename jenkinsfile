@@ -16,7 +16,14 @@ pipeline {
                 sh "terraform plan"
             }
         }
-
+       
+       stage('Appy Resources') {
+            steps {
+                input {
+                    message "Do you want to apply?"
+                }
+            }
+       }
         stage('Deploy') {
             steps {
                 echo "Deploy Stage"
