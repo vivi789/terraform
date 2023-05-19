@@ -20,7 +20,7 @@ pipeline {
        stage('Appy Resources') {
             steps {
                 input {
-                    message "Do you want to apply?"
+                    message: "Do you want to apply?"
                 }
             }
        }
